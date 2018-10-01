@@ -21,12 +21,13 @@ show databases;//打印所有数据库的列表
 +--------------------+
 ```
 use mydb ← 也可以是 use mydb;
-
+```
 创建新的数据表格 `TABLE`为表格名称
                 `ID`和`context`为字段(标题)
                 `INT`和`VARCHAR`为数据类型
                 `NOT NULL`和`NULL`可否为无
                 `PRIMARY KEY`为列表的主关键字
+```
 ```
 CREATE TABLE(
   ID INT NOT NULL PRIMARY KEY,
