@@ -23,12 +23,12 @@ show databases;//打印所有数据库的列表
 use mydb ← 也可以是 use mydb;
 
 创建新的数据表格
-```
+
 CREATE `TABLE`(
-  ID INT NOT NULL PRIMARY KEY,
+  `ID` INT `NOT NULL` `PRIMARY KEY`,
   context VARCHAR(255) NULL
 );
-```
+
 
 show tables;//查看此数据库中所有的表格
 ```
