@@ -4,7 +4,7 @@
 * Access
 * Oracle
 
-C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql.exe `-u root -p`
+C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql.exe __`-u root -p`__
 
 Enter password:***********
 
