@@ -219,3 +219,4 @@ mysql> exit
 Bye
 ```
 
+![baidu]
