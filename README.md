@@ -218,5 +218,4 @@ DESCRIBE mysql.user;
 mysql> exit
 Bye
 ```
-
-![baidu]
+![image](http://github.com/chenyihong/DBmaster/1.jpg)
