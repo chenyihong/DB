@@ -29,6 +29,34 @@ use mydb ← 也可以是 use mydb;
                 `PRIMARY KEY`为列表的主关键字
 ```
 ```
+字符串类型     字节大小         描述及存储需求
+
+CHAR         0-255字节          定长字符串
+
+VARCHAR      0-255字节          变长字符串
+
+TINYBLOB     0-255字节        不超过 255 个字符的二进制字符串
+
+TINYTEXT     0-255字节        短文本字符串
+
+BLOB         0-65535字节      二进制形式的长文本数据
+
+TEXT         0-65535字节      长文本数据
+
+MEDIUMBLOB   0-16 777 215字节 二进制形式的中等长度文本数据
+
+MEDIUMTEXT   0-16 777 215字节 中等长度文本数据
+
+LOGNGBLOB    0-4 294 967 295字节 二进制形式的极大文本数据
+
+LONGTEXT     0-4 294 967 295字节 极大文本数据
+
+VARBINARY(M)                   允许长度0-M个字节的定长字节符串，值的长度+1个字节
+
+BINARY(M)    M                 允许长度0-M个字节的定长字节符串
+```
+
+```
 CREATE TABLE(
   ID INT NOT NULL PRIMARY KEY,
   context VARCHAR(255) NULL
