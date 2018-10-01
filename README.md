@@ -1,8 +1,8 @@
-<h1 style="text-align:center"># ---DATABASE---</h1>
-1.MySQL
-2.Access
-3.Oracle
+# ---DATABASE---
 
+* MySQL
+* Access
+* Oracle
 
 C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql.exe `-u root -p`
 
