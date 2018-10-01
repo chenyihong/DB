@@ -218,4 +218,4 @@ DESCRIBE mysql.user;
 mysql> exit
 Bye
 ```
-![image](http://github.com/chenyihong/DBmaster/1.jpg)
+![image](https://github.com/chenyihong/DB/blob/master/1.jpg)
