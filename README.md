@@ -8,7 +8,7 @@ C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql.exe `-u root -p`
 Enter password:***********
 
 show databases;//打印所有数据库的列表
-
+```
 +--------------------+
 | Database           |
 +--------------------+
@@ -18,7 +18,7 @@ show databases;//打印所有数据库的列表
 | performance_schema |
 | sys                |
 +--------------------+
-
+```
 use mydb ← 也可以是 use mydb;
 
 show tables;//查看此数据库中所有的表格
