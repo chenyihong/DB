@@ -1,4 +1,4 @@
-<h1 style="text-align:center"># ---DATABASE---<h1>
+<h1 style="text-align:center"># ---DATABASE---</h1>
 1.MySQL
 2.Access
 3.Oracle
