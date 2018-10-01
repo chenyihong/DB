@@ -5,6 +5,7 @@
 
 
 C:\Program Files\MySQL\MySQL Server 8.0\bin>mysql.exe `-u root -p`
+
 Enter password:***********
 
 show databases;//打印所有数据库的列表
