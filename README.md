@@ -28,12 +28,13 @@ use mydb ← 也可以是 use mydb;
                 `ID`和`context`为字段(标题)
                 `INT`和`VARCHAR`为数据类型/字符串类型
                 `NOT NULL`和`NULL`可否为无
+                `AUTO_INCREMENT`当输入新的数据,ID会自动增加
                 `PRIMARY KEY`为列表的主关键字
 ```
 
 ```
 CREATE mytable(
-  ID INT NOT NULL PRIMARY KEY,
+  ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   context VARCHAR(255) NULL
 );
 ```
@@ -76,22 +77,68 @@ show tables;//查看此数据库中所有的表格
 | mytable        |
 +----------------+
 ```
+
+```
+用于查看表格的数据类型
 describe mytable;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| ID      | int(11)      | NO   | PRI | NULL    | auto_increment |
+| context | varchar(255) | YES  |     | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
 ```
-+---------+--------------+------+-----+---------+-------+
-| Field   | Type         | Null | Key | Default | Extra |
-+---------+--------------+------+-----+---------+-------+
-| id      | int(11)      | NO   | PRI | NULL    |       |
-| context | varchar(255) | YES  |     | NULL    |       |
-+---------+--------------+------+-----+---------+-------+
+
 ```
-```
+用于输入数据
+-案例1:
 INSERT INTO mytable (id,context)
 VALUES(1,"primo");
-
 Query OK, 1 row affected (0.53 sec)
++----+---------+
+| ID | context |
++----+---------+
+|  1 | primo   |
++----+---------+
+
+-案例2:[用于有AUTO_INCREMENT]
+INSERT INTO mytable(context)
+VALUES("secondo");
+Query OK, 1 row affected (0.24 sec)
++----+---------+
+| ID | context |
++----+---------+
+|  1 | primo   |
+|  2 | secondo |
++----+---------+
+
+-案例3:
+INSERT INTO mytable
+VALUES(3,"TERZO");
+Query OK, 1 row affected (0.21 sec)
++----+---------+
+| ID | context |
++----+---------+
+|  1 | primo   |
+|  2 | secondo |
+|  3 | TERZO   |
++----+---------+
 ```
 ```
+用于删除指定表格中的个别指定数据
+DELETE FROM mytable
+WHERE ID=3;   <===========删除的条件,此处为id为3的所有数据
+Query OK, 1 row affected (0.21 sec)
++----+---------+
+| ID | context |
++----+---------+
+|  1 | primo   |
+|  2 | secondo |
++----+---------+
+```
+
+```
+用于查看表格中所有数据
 mysql> select * from mytable;
 +----+---------+
 | id | context |
@@ -99,10 +146,15 @@ mysql> select * from mytable;
 |  1 | primo   |
 +----+---------+
 ```
+
+```
+用于删除表格(!!!!!慎用!!!!!)
+mysql> DROP TABLE mytable;
+Query OK, 0 rows affected (1.17 sec)
+```
+
 ```
 DESCRIBE mysql.user;
-```
-```
 +------------------------+-----------------------------------+------+-----+-----------------------+-------+
 | Field                  | Type                              | Null | Key | Default               | Extra |
 +------------------------+-----------------------------------+------+-----+-----------------------+-------+
