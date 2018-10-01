@@ -39,3 +39,10 @@ describe mytable;
 | context | varchar(255) | YES  |     | NULL    |       |
 +---------+--------------+------+-----+---------+-------+
 ```
+
+```
+CREATE TABLE(
+  ID INT NOT NULL PRIMARY KEY,
+  context VARCHAR(255) NULL
+);
+```
